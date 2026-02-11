@@ -4,31 +4,31 @@ public class Challenge_05 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Create a Vehicle base class with start() method. Create Car and Bike subclasses that override the start() method.
-		Vehicle v1 = new Car();
-		Vehicle v2 = new Bike();
-		v1.start();
-		v2.start();
+		//Create a class "Animal" and subclasses "Dog" and "Cat". Override a method to make each animal make a sound.
+		Animal dog = new Dog();
+		Animal cat = new Cat();
+		dog.makeSound();
+		cat.makeSound();
 	}
 
 }
 
-class Vehicle {
-	void start() {
-		System.out.println("Vehicle starts");
+class Animal {
+	void makeSound() {
+		System.out.println("Animal makes a sound");
 	}
 }
 
-class Car extends Vehicle {
+class Dog extends Animal {
 	@Override
-	void start() {
-		System.out.println("Car starts with a key");
+	void makeSound() {
+		System.out.println("Dog says: Woof! Woof!");
 	}
 }
 
-class Bike extends Vehicle {
+class Cat extends Animal {
 	@Override
-	void start() {
-		System.out.println("Bike starts with a kick");
+	void makeSound() {
+		System.out.println("Cat says: Meow! Meow!");
 	}
 }
